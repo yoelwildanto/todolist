@@ -55,7 +55,7 @@ function TodoList3() {
         <Input 
         variant={'outline'} 
         placeholder={'Add todo'}
-        width={'500px'}
+        width={'80vw'}
           value={inputTask}
           onChange={(e) => setInputTask(e.target.value)}
         />
