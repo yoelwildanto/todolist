@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Slab', serif;
+margin: 0;
+padding: 0;
+color: white;
+}
+
+.todo-list{
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #1A202C;
+    padding: 50px 30px 10px 30px;
+}
+.todo-list h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.tasks{
+    width: 100%;
+    margin: 20px 10px 10px 10px;
+}
+
+.tasks hr{
+    border-color: rgba(255, 255, 255, 0.324);
+}
+
+.tasks span{
+    margin: 8px 20px;
+    font-weight: 300;
+}
+
+.task{
+    margin-bottom: 20px;
+}
+
+.task button{
+    color:red;
+    /* position: static; */
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #FFB2B6;
+    background: transparent;
+    border-color: #FFB2B6;
+    outline: none;
+    right: 0;
+}
+
+.completed-count{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0px 20px 0px;
+}
+
+.input-container {
+    display: flex;
+flex-direction: column;}
+

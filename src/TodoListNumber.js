@@ -1,6 +1,7 @@
 // src/TodoList.js
 import React, { useState } from 'react';
 import Task from './task';
+import { ChakraComponent } from '@chakra-ui/react';
 
 function TodoList2() {
   const [tasks, setTasks] = useState([]);
