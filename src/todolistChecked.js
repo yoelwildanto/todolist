@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './main.css'
 import { Button, Checkbox, Input } from '@chakra-ui/react'
+// import{DeleteIcon} from '@chakra-ui/icons'
 import { BsTrash } from 'react-icons/bs'
 
 function TodoList3() {
@@ -42,7 +43,8 @@ function TodoList3() {
               onChange={() => handleToggleTask(index)}
             />
             <span className={task.completed ? 'completed' : ''}>{task.text}</span>
-            <button onClick={() => handleDeleteTask(index)}> <BsTrash/> </button>
+            <Button width={'25px'} colorScheme='red' outline={'pink'} leftIcon={<BsTrash/>} onClick={() => handleDeleteTask(index)}> </Button>
+            {/* <button onClick={() => handleDeleteTask(index)}> <BsTrash/> </button> */}
           </div>
         ))}
         <hr/>
