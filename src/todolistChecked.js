@@ -1,9 +1,12 @@
 // src/TodoList.js
 import React, { useState } from 'react';
 import './main.css'
-import { Button, Checkbox, Input } from '@chakra-ui/react'
-// import{DeleteIcon} from '@chakra-ui/icons'
-import { BsTrash } from 'react-icons/bs'
+import { Button, Checkbox, Input, IconButton, Box } from '@chakra-ui/react'
+import{DeleteIcon} from '@chakra-ui/icons'
+// import { BsTrash } from 'react-icons/bs'
+// import styled from '@emotion/styled';
+// const Span = styled.span`
+// width: 100vw`
 
 function TodoList3() {
   const [tasks, setTasks] = useState([]);
@@ -33,35 +36,48 @@ function TodoList3() {
   return (
     <div className="todo-list">
       <h1>Chores ToDo List</h1>
-      <div className="tasks">
+      <Box w={'100vw'}  className="tasks">
         {tasks.map((task, index) => (
-          <div key={index} className="task">
-            <Checkbox
-              borderColor={'green'}
+          <Box display="flex" alignItems={'center'} flexDirection={'row'} p={'10px 60px'} key={index} className="task" gap={'20px'}>
+            <Checkbox p={'0px 20px'}
+              borderColor={'#6CA38D'}
               colorScheme={'green'}
               isChecked={task.completed}
               onChange={() => handleToggleTask(index)}
             />
-            <span className={task.completed ? 'completed' : ''}>{task.text}</span>
-            <Button width={'25px'} colorScheme='red' outline={'pink'} leftIcon={<BsTrash/>} onClick={() => handleDeleteTask(index)}> </Button>
+            <Box color={'white'} as={'span'} w={'80vw'} className={task.completed ? 'completed' : ''}>{task.text}</Box>
+            {/* <Button borderColor={'pink'} width={'25px'} colorScheme='red' outline={'pink'} leftIcon={<BsTrash/>} onClick={() => handleDeleteTask(index)}> </Button> */}
             {/* <button onClick={() => handleDeleteTask(index)}> <BsTrash/> </button> */}
-          </div>
+            <IconButton 
+            variant='outline'
+            colorScheme='#FFB2B6'
+            color='#FFB2B6'
+            // _hover={'#FFB2B6'}
+            // icon={<DeleteIcon/>}
+            // colorScheme='re
+            // bgColor={'blue'}
+            icon={<DeleteIcon />}
+            onClick={() => handleDeleteTask(index)} />
+          </Box>
         ))}
         <hr/>
-      </div>
+      </Box>
       
       <div className="completed-count">
-        Done: {completedTasks.length}
+        Done : {completedTasks.length}
       </div>
       <div className="input-container">
+        <h3>Add ToDo</h3>
         <Input 
+        color={'white'}
         variant={'outline'} 
-        placeholder={'Add todo'}
+        borderColor={'#5E5E5E'}
+        // placeholder={'Add todo'}
         width={'80vw'}
           value={inputTask}
           onChange={(e) => setInputTask(e.target.value)}
         />
-        <Button margin={'10px'} size={'md'} height={'30px'} width={'100px'} border={'2px'} borderColor={'red.500'} colorScheme='red' onClick={handleAddTask}>ADD TASK</Button>
+        <Button fontFamily={'sans-serif'} textDecorationThickness={'10'} bg={'#8ECEF5'} textColor={'black'} margin={'10px 10px 10px 0px'} size={'md'} height={'40px'} width={'120px'} border={'2px'} borderColor={'transparent'} colorScheme='blue.500' onClick={handleAddTask}>ADD TASK</Button>
       </div>
       
     </div>

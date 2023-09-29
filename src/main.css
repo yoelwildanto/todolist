@@ -5,7 +5,8 @@
 font-family: 'Roboto Slab', serif;
 margin: 0;
 padding: 0;
-color: white;
+/* color: white; */
+
 }
 
 .todo-list{
@@ -21,10 +22,11 @@ color: white;
 .todo-list h1{
     text-align: center;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 23px;
+    color: white;
 }
 
-.tasks{
+/* .tasks{
     width: 100%;
     margin: 20px 10px 10px 10px;
 }
@@ -36,15 +38,15 @@ color: white;
 .tasks span{
     margin: 8px 20px;
     font-weight: 300;
-}
+    }
 
 .task{
     margin-bottom: 20px;
-}
+} */
 
-.task button{
+/* .task button{
     color:red;
-    /* position: static; */
+    position: static;
     font-size: 15px;
     padding: 5px;
     border: 1px solid #FFB2B6;
@@ -52,15 +54,26 @@ color: white;
     border-color: #FFB2B6;
     outline: none;
     right: 0;
-}
+} */
 
 .completed-count{
     font-size: 20px;
     font-weight: 500;
     margin: 10px 0px 20px 0px;
+    color: white;
 }
 
 .input-container {
     display: flex;
 flex-direction: column;}
 
+.input-container h3{
+    font-weight: 300;
+    padding-bottom: 5px;
+    color: #C9C9C9;
+}
+
+
+hr{
+    border-color: #858585;
+}
